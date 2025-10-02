@@ -87,8 +87,7 @@ EMA(S,6)                            # Compute 6-period EMA for sequence S
 ### Selected utility functions in MyTT
 * n天前的数据：`REF`
 ```python
-REF(CLOSE, 1)              # 截止到昨天收盘价 序列
-REF(CLOSE, 1)              # Series up to yesterday's close
+REF(CLOSE, 1)            # Series up to yesterday's close
 ```
 
 * 移动平均线计算：MA
@@ -176,7 +175,7 @@ LLV(MIN(OPEN, CLOSE), 60)              # Lowest of OPEN and CLOSE over the last 
 IF(OPEN > CLOSE, OPEN, CLOSE)          # If open > close, return OPEN; otherwise return CLOSE
 ```
 
-### 具体指标的实现，全部基于MyTT库中的工具函数 （更多指标可以自行添加）
+### Implementations of specific indicators (built on MyTT utility functions; add more as needed)
 
 ```python
 def MACD(CLOSE,SHORT=12,LONG=26,M=9):    # With EMA, use 120 days of CLOSE; matches Xueqiu to 2 decimals
